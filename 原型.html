@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Person(name,age){
+        this.name=name;
+        this.age=age;
+    }
+    //通过原型来添加方法
+    Person.prototype.eat=function(){
+      console.log("haha");
+    };
+    var per1=new Person("1",123);
+    var per2=new Person("2",456);
+    per1.eat();
+    per2.eat();
+    console.log(per1.eat===per2.eat);
+    console.dir(per1);
+    console.dir(per2);
+</script>
+</body>
+</html>

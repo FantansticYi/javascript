@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script src="common.js"></script>
+<script>
+    function Student(name,age,sex){
+        this.name=name;
+        this.age=age;
+        this.sex=sex;
+    }
+    //简单地原型写法
+    Student.prototype={
+      constructor:Student,
+      height:"188",
+      weight:"55kg",
+      study:function(){
+          console.log("123");
+      },
+
+      eat:function(){
+          console.log("456");
+      }
+    };
+
+    var stu=new Student("1",12,"2");
+    stu.eat();
+    stu.study();
+    console.dir(Student);
+    console.dir(stu);
+    // Student.prototype.height="188";
+    // Student.prototype.weight="55kg";
+    // Student.prototype.study=function(){
+    //     console.log("");
+    // };
+    // Student.prototype.eat=function(){
+    //     console.log("");
+    // };
+    // //实例化对象并初始化
+    // var stu=new Student("1",12,"2");
+    // console.dir(Student);
+    // console.dir(stu);
+
+</script>
+</body>
+</html>

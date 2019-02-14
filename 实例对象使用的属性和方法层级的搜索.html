@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function Person(age,sex){
+        this.age=age;//年龄
+        this.sex=sex;//性别
+        this.eat=function(){
+          console.log("构造函数中的吃");
+        };
+    }
+    Person.prototype.sex="女";
+    var per=new Person(20,"男");
+    consolo.log(per.sex);//男
+    console.dir(per);
+
+
+</script>
+</body>
+</html>

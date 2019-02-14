@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    //通过自调用函数产生一个随机数对象，在自调用函数外面，调用该随机数对象方法产生随机数
+    (function(window){
+        //产生随机数的构造函数
+        function Random(){
+
+        }
+        //在原型对象中添加方法
+        Random.prototype.getRandom=function () {
+          return Math.floor(Math.random()*5);
+        };
+        window.Random=new Random();
+    })(window);
+    var rm=new Random();
+    console.log(rm.getRandom());
+</script>
+</body>
+</html>
